@@ -1,0 +1,40 @@
+/* src/components/SocialIcons.css */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Specific background colors */
+.fb {
+  background-color: #3b5998;
+}
+.yt {
+  background-color: #FF0000;
+}
+.google {
+  background-color: #DB4437;
+}
+.tiktok {
+  background-color: #000000;
+}
+.twitter {
+  background-color: #1DA1F2;
+}
