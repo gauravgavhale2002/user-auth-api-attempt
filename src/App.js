@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RegisterForm from './components/RegisterForm';
+import LoginForm from './components/LoginForm';
+import ResetPasswordForm from './components/ResetPasswordForm';
+import SocialIcons from './components/SocialIcons'; // ✅
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/reset-password" element={<ResetPasswordForm />} />
+        </Routes>
+        <SocialIcons /> {/* ✅ This will be shown on every page */}
+      </div>
+    </Router>
   );
 }
 
 export default App;
+// Note: The SocialIcons component is imported and used in the App component to ensure it appears on every page.
